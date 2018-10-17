@@ -12,12 +12,13 @@
 @isTest
 private class LiveAgentUtilSvcTest {
     static testMethod void getLiveAgentEnvTest(){
-		Organization org = LiveAgentUtilSvc.getOrgInfo();
+	Organization org = LiveAgentUtilSvc.getOrgInfo();
         // === Start Test ===
         Test.startTest();        
         List<LiveAgentUtilSvc.LiveAgentEnv> lst = LiveAgentUtilSvc.getLiveAgentEnv();
         Test.StopTest();
-		List<LiveAgent_Env__mdt> envList = [SELECT Id, DeveloperName, Version__c, brandURL__c,
+	    
+	List<LiveAgent_Env__mdt> envList = [SELECT Id, DeveloperName, Version__c, brandURL__c,
                                                  baseLiveAgentURL__c, baseLiveAgentContentURL__c, 
                                                  deploymentId__c, buttonId__c, eswLiveAgentDevName__c 
                                                  FROM LiveAgent_Env__mdt ];        
@@ -27,11 +28,12 @@ private class LiveAgentUtilSvcTest {
     }
 
     static testMethod void queryDeploymentTest(){
-		Organization org = LiveAgentUtilSvc.getOrgInfo();
+	Organization org = LiveAgentUtilSvc.getOrgInfo();
         // === Start Test ===
         Test.startTest();        
         List<LiveAgentUtilSvc.LiveAgentEnv> lst = LiveAgentUtilSvc.queryDeployment('Test_Certificate');
         Test.StopTest();
+	    
         System.assertEquals(lst.size(),1);
         LiveAgentUtilSvc.LiveAgentEnv env = lst[0];
         System.assertEquals(env.orgId, org.Id);
