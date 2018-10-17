@@ -1,4 +1,4 @@
-# sfdx-live-agent-util
+# sfdx-live-agent-util Salesfroce DX Project
 
 ## Overview
 Salesforce DX project. Utility service to separate LiveAgent configuartion on client from specific org and make a generic requests adjust by environment, example can be DV, QA, STAGE.
@@ -13,9 +13,12 @@ This small serfvice aim is to solve thi s problem by giving developers a REST se
 
 ## Resources
 
-
 ## Description of Files and Directories
+Custom APEX REST Service classes
+LiveAgentUtilSvc
+LiveAgentUtilSvcTest
 
+Custom Metadata Type: `LiveAgent_Env__mdt`
 
 ## Issues
 
