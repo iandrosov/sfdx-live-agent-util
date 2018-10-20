@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Test Config</label>
+    <protected>false</protected>
+    <values>
+        <field>Version__c</field>
+        <value xsi:type="xsd:string">5.0</value>
+    </values>
+    <values>
+        <field>baseLiveAgentContentURL__c</field>
+        <value xsi:type="xsd:string">https://d.la1-c1-phx.salesforceliveagent.com/chat</value>
+    </values>
+    <values>
+        <field>baseLiveAgentURL__c</field>
+        <value xsi:type="xsd:string">https://c.la1-c1-phx.salesforceliveagent.com/content</value>
+    </values>
+    <values>
+        <field>brandURL__c</field>
+        <value xsi:type="xsd:string">https://ability-java-3194-dev-ed.secure.force.com/branding</value>
+    </values>
+    <values>
+        <field>buttonId__c</field>
+        <value xsi:type="xsd:string">57361000000Cm9p</value>
+    </values>
+    <values>
+        <field>deploymentId__c</field>
+        <value xsi:type="xsd:string">572610000008a5u</value>
+    </values>
+    <values>
+        <field>eswLiveAgentDevName__c</field>
+        <value xsi:type="xsd:string">EmbeddedServiceLiveAgent_Parent04I61000000000pEAA_15e3d8707e0</value>
+    </values>
+</CustomMetadata>

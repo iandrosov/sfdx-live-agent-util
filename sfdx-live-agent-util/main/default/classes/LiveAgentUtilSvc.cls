@@ -5,10 +5,7 @@
  * author: A.I.
  */ 
 @RestResource(urlMapping='/LiveAgentEnv/*')
-public without sharing class LiveAgentUtilSvc {
-    public LiveAgentUtilSvc() {
-
-    }
+global without sharing class LiveAgentUtilSvc {
 
     @HttpGet
     global static List<LiveAgentEnv> getLiveAgentEnv(){
@@ -33,7 +30,7 @@ public without sharing class LiveAgentUtilSvc {
                                                  baseLiveAgentURL__c, baseLiveAgentContentURL__c, 
                                                  deploymentId__c, buttonId__c, eswLiveAgentDevName__c 
                                                  FROM LiveAgent_Env__mdt WHERE DeveloperName =: nm];
-        BISK_LiveAgentEnv env = new BISK_LiveAgentEnv();
+        LiveAgentEnv env = new LiveAgentEnv();
         env.version = '5.0';
         env.developerName = nm; 
         env.orgId = orgInfo.Id;
@@ -65,7 +62,7 @@ public without sharing class LiveAgentUtilSvc {
                                                  FROM LiveAgent_Env__mdt ];
         
         for (LiveAgent_Env__mdt cmdt : envList){
-        	LiveAgentEnv env = new iveAgentEnv();
+        	LiveAgentEnv env = new LiveAgentEnv();
         	env.orgId = orgInfo.Id;
         	env.instanceName = orgInfo.InstanceName;
         	env.isSandbox = orgInfo.IsSandbox;
